@@ -33,6 +33,9 @@
         .nav { margin-top: 15px; }
         .nav a { margin-right: 15px; font-weight: bold; font-size: 1.1rem; }
 
+        /* HIDE BOOK SECTION BY DEFAULT */
+        #foundations { display: none; }
+
         /* Books Section Specific Styles */
         .book-category { margin-top: 20px; margin-bottom: 25px; }
         .book-category h3 { font-size: 1.1rem; color: #444; border-bottom: none; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -62,17 +65,22 @@
         
         <div class="nav">
             <a href="mailto:amiek@edu.hse.ru">Email</a>
-            <a href="#foundations">Intellectual Foundations</a>
+            <a href="#foundations" id="nav-foundations">Intellectual Foundations</a>
         </div>
     </div>
 
-    <!-- READING LIST SECTION -->
+    <!-- INTELLECTUAL FOUNDATIONS SECTION (HIDDEN BY DEFAULT) -->
     <section id="foundations">
-        <h2>Personal & Grounded</h2>
+        <h2>
+            Intellectual Foundations 
+            <span style="float: right; font-size: 0.95rem; font-weight: normal;">
+                <a href="#" id="close-foundations" style="color: #666;">[Hide]</a>
+            </span>
+        </h2>
         <p>A curated selection of literature and philosophy that shape my worldview, ranging from classical antiquity to modern explorations of the human condition.</p>
         
         <div class="book-category">
-            <h3>Greek & Roman Philosophy / Classics</h3>
+            <h3>Greek & Roman Antiquity</h3>
             <ul class="book-list">
                 <li><a href="https://www.goodreads.com/search?q=The+Republic+Plato" target="_blank">The Republic</a> — Plato</li>
                 <li><a href="https://www.goodreads.com/search?q=The+Iliad+Homer" target="_blank">The Iliad</a> — Homer</li>
@@ -84,7 +92,7 @@
         </div>
 
         <div class="book-category">
-            <h3>Russian Masters</h3>
+            <h3>The Russian Masters</h3>
             <ul class="book-list">
                 <li><a href="https://www.goodreads.com/search?q=Crime+and+Punishment+Fyodor+Dostoevsky" target="_blank">Crime and Punishment</a> — Fyodor Dostoevsky</li>
                 <li><a href="https://www.goodreads.com/search?q=The+Brothers+Karamazov+Fyodor+Dostoevsky" target="_blank">The Brothers Karamazov</a> — Fyodor Dostoevsky</li>
@@ -115,7 +123,7 @@
         </div>
 
         <div class="book-category">
-            <h3>European Canon & Psychoanalysis</h3>
+            <h3>The European Canon & Psychoanalysis</h3>
             <ul class="book-list">
                 <li><a href="https://www.goodreads.com/search?q=The+Divine+Comedy+Dante+Alan+Mandelbaum" target="_blank">The Divine Comedy</a> — Dante Alighieri <em>(trans. Alan Mandelbaum)</em></li>
                 <li><a href="https://www.goodreads.com/search?q=Confessions+Saint+Augustine" target="_blank">Confessions</a> — Saint Augustine</li>
@@ -169,20 +177,20 @@
     <!-- WORKS IN PROGRESS -->
     <section>
         <h2>Works in Progress</h2>
+
+        <div class="paper">
+            <h3>The Generational Shift: Dynamic Effects of Educational Infrastructure on Women’s Empowerment and Marriage Markets in Mexico and Brazil</h3>
+            <div class="journal">Project in Progress</div>
+            <p>
+                Evaluates the causal impact of staggered sub-national secondary school expansions on women's life-cycle outcomes in Mexico and Brazil. Utilizing IPUMS census microdata (1990–2020) matched with administrative school foundation records, this comparative study exploits geographic and temporal variation in access to secondary education. Methodologically, the study implements the Borusyak, Jaravel, and Spiess (2024) imputation estimator to address biases in traditional staggered Difference-in-Differences (TWFE) designs, testing labor market outcomes alongside marriage market signaling channels (assortative mating and spousal age gaps).
+            </p>
+        </div>
         
         <div class="paper">
             <h3>Does Asymmetric Cross-Border Cultural Exposure Weaken National Identity Salience and Generalized Social Trust?</h3>
             <div class="journal">Project in Progress</div>
             <p>
                 Investigates the impact of asymmetric cross-border cultural flows on state-centric national pride and generalized trust in post-partition Pakistan. This project implements a mixed-method design combining Hierarchical Linear Modeling (HLM) on World Values Survey microdata with province-level digital exposure indices derived from Google Trends and GDELT Project APIs, supplemented by qualitative historical process-tracing of state educational boundary maintenance and heritage-language buffering mechanisms.
-            </p>
-        </div>
-
-         <div class="paper">
-            <h3>The Generational Shift: Dynamic Effects of Educational Infrastructure on Women’s Empowerment and Marriage Markets in Mexico and Brazil</h3>
-            <div class="journal">Project in Progress</div>
-            <p>
-                Evaluates the causal impact of staggered sub-national secondary school expansions on women's life-cycle outcomes in Mexico and Brazil. Utilizing IPUMS census microdata (1990–2020) matched with administrative school foundation records, this comparative study exploits geographic and temporal variation in access to secondary education. Methodologically, the study implements the Borusyak, Jaravel, and Spiess (2024) imputation estimator to address biases in traditional staggered Difference-in-Differences (TWFE) designs, testing labor market outcomes alongside marriage market signaling channels (assortative mating and spousal age gaps).
             </p>
         </div>
     </section>
@@ -199,7 +207,7 @@
     <section>
         <h2>Experience</h2>
 
-       <div class="job">
+     <div class="job">
             <h3>Research Assistant | Faculty of Economic Sciences (FES), HSE University</h3>
             <div class="meta">Sep 2025 – Present | Moscow, Russia</div>
             <p>
@@ -262,6 +270,37 @@
         <p>Email: <a href="mailto:amiek@edu.hse.ru">amiek@edu.hse.ru</a></p>
         <p>Location: Moscow, Russia</p>
     </section>
+
+    <!-- JAVASCRIPT FOR TOGGLE VISIBILITY -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var navLink = document.getElementById('nav-foundations');
+            var closeLink = document.getElementById('close-foundations');
+            var section = document.getElementById('foundations');
+
+            // Toggle visibility when clicking navigation link
+            navLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (section.style.display === 'block') {
+                    section.style.display = 'none';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    section.style.display = 'block';
+                    // Allow small delay for browser to register display:block before scrolling
+                    setTimeout(function() {
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }, 50);
+                }
+            });
+
+            // Collapse section when clicking [Hide]
+            closeLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                section.style.display = 'none';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
 
 </body>
 </html>
