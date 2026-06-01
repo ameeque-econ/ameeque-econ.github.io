@@ -13,6 +13,7 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
+            scroll-behavior: smooth; /* Enables smooth scrolling for the nav links */
         }
         h1 { font-size: 2.2rem; margin-bottom: 5px; color: #000; }
         h2 { font-size: 1.5rem; border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-top: 40px; }
@@ -31,6 +32,14 @@
         
         .nav { margin-top: 15px; }
         .nav a { margin-right: 15px; font-weight: bold; font-size: 1.1rem; }
+
+        /* Books Section Specific Styles */
+        .book-category { margin-top: 20px; margin-bottom: 25px; }
+        .book-category h3 { font-size: 1.1rem; color: #444; border-bottom: none; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .book-list { list-style-type: none; padding-left: 0; margin: 0; }
+        .book-list li { margin-bottom: 8px; padding-left: 20px; text-indent: -20px; }
+        .book-list li::before { content: "• "; color: #008080; font-weight: bold; }
+        .book-list em { color: #666; font-size: 0.95rem; }
 
         .btn {
             display: inline-block;
@@ -53,8 +62,75 @@
         
         <div class="nav">
             <a href="mailto:amiek@edu.hse.ru">Email</a>
+            <a href="#reading-list">Reading List</a>
         </div>
     </div>
+
+    <!-- READING LIST SECTION -->
+    <section id="reading-list">
+        <h2>Selected Reading List</h2>
+        <p>A curated selection of literature and philosophy that shape my worldview, ranging from classical antiquity to regional geopolitics.</p>
+        
+        <div class="book-category">
+            <h3>Greek & Roman Philosophy / Classics</h3>
+            <ul class="book-list">
+                <li><a href="https://www.goodreads.com/search?q=The+Republic+Plato" target="_blank">The Republic</a> — Plato</li>
+                <li><a href="https://www.goodreads.com/search?q=The+Iliad+Homer" target="_blank">The Iliad</a> — Homer</li>
+                <li><a href="https://www.goodreads.com/search?q=The+Odyssey+Homer+Robert+Fagles" target="_blank">The Odyssey</a> — Homer <em>(trans. Robert Fagles)</em></li>
+                <li><a href="https://www.goodreads.com/search?q=The+Aeneid+Virgil+Robert+Fagles" target="_blank">The Aeneid</a> — Virgil <em>(trans. Robert Fagles)</em></li>
+                <li><a href="https://www.goodreads.com/search?q=Nicomachean+Ethics+Aristotle" target="_blank">Nicomachean Ethics</a> — Aristotle</li>
+                <li><a href="https://www.goodreads.com/search?q=Meditations+Marcus+Aurelius" target="_blank">Meditations</a> — Marcus Aurelius</li>
+            </ul>
+        </div>
+
+        <div class="book-category">
+            <h3>Russian Philosophy & Literature</h3>
+            <ul class="book-list">
+                <li><a href="https://www.goodreads.com/search?q=Crime+and+Punishment+Fyodor+Dostoevsky" target="_blank">Crime and Punishment</a> — Fyodor Dostoevsky</li>
+                <li><a href="https://www.goodreads.com/search?q=The+Brothers+Karamazov+Fyodor+Dostoevsky" target="_blank">The Brothers Karamazov</a> — Fyodor Dostoevsky</li>
+                <li><a href="https://www.goodreads.com/search?q=Notes+from+Underground+Fyodor+Dostoevsky" target="_blank">Notes from Underground</a> — Fyodor Dostoevsky</li>
+                <li><a href="https://www.goodreads.com/search?q=Anna+Karenina+Leo+Tolstoy" target="_blank">Anna Karenina</a> — Leo Tolstoy</li>
+            </ul>
+        </div>
+
+        <div class="book-category">
+            <h3>Pakistani Literature on Pakistan</h3>
+            <ul class="book-list">
+                <li><a href="https://www.goodreads.com/search?q=Pakistan+A+Hard+Country+Anatol+Lieven" target="_blank">Pakistan: A Hard Country</a> — Anatol Lieven</li>
+                <li><a href="https://www.goodreads.com/search?q=The+Reluctant+Fundamentalist+Mohsin+Hamid" target="_blank">The Reluctant Fundamentalist</a> — Mohsin Hamid</li>
+                <li><a href="https://www.goodreads.com/search?q=A+Case+of+Exploding+Mangoes+Mohammed+Hanif" target="_blank">A Case of Exploding Mangoes</a> — Mohammed Hanif</li>
+                <li><a href="https://www.goodreads.com/search?q=Mottled+Dawn+Saadat+Hasan+Manto" target="_blank">Mottled Dawn</a> — Saadat Hasan Manto</li>
+                <li><a href="https://www.goodreads.com/search?q=This+Is+Where+the+Serpent+Lives+Daniyal+Mueenuddin" target="_blank">This Is Where the Serpent Lives</a> — Daniyal Mueenuddin</li>
+            </ul>
+        </div>
+
+        <div class="book-category">
+            <h3>American Literature</h3>
+            <ul class="book-list">
+                <li><a href="https://www.goodreads.com/search?q=The+Fountainhead+Ayn+Rand" target="_blank">The Fountainhead</a> — Ayn Rand</li>
+                <li><a href="https://www.goodreads.com/search?q=Thy+Neighbor%27s+Wife+Gay+Talese" target="_blank">Thy Neighbor's Wife</a> — Gay Talese</li>
+                <li><a href="https://www.goodreads.com/search?q=Walden+Henry+David+Thoreau" target="_blank">Walden</a> — Henry David Thoreau</li>
+                <li><a href="https://www.goodreads.com/search?q=Moby-Dick+Herman+Melville" target="_blank">Moby-Dick</a> — Herman Melville</li>
+            </ul>
+        </div>
+
+        <div class="book-category">
+            <h3>European Literature & Psychoanalysis</h3>
+            <ul class="book-list">
+                <li><a href="https://www.goodreads.com/search?q=The+Divine+Comedy+Dante+Alan+Mandelbaum" target="_blank">The Divine Comedy</a> — Dante Alighieri <em>(trans. Alan Mandelbaum)</em></li>
+                <li><a href="https://www.goodreads.com/search?q=Confessions+Saint+Augustine" target="_blank">Confessions</a> — Saint Augustine</li>
+                <li><a href="https://www.goodreads.com/search?q=Paradise+Lost+John+Milton" target="_blank">Paradise Lost</a> — John Milton</li>
+                <li><a href="https://www.goodreads.com/search?q=Hamlet+William+Shakespeare" target="_blank">Hamlet</a> — William Shakespeare</li>
+                <li><a href="https://www.goodreads.com/search?q=Faust+Johann+Wolfgang+von+Goethe" target="_blank">Faust</a> — Johann Wolfgang von Goethe</li>
+                <li><a href="https://www.goodreads.com/search?q=Ulysses+James+Joyce" target="_blank">Ulysses</a> — James Joyce</li>
+                <li><a href="https://www.goodreads.com/search?q=To+the+Lighthouse+Virginia+Woolf" target="_blank">To the Lighthouse</a> — Virginia Woolf</li>
+                <li><a href="https://www.goodreads.com/search?q=A+Defence+of+Poetry+Percy+Shelley" target="_blank">A Defence of Poetry</a> — Percy Bysshe Shelley</li>
+                <li><a href="https://www.goodreads.com/search?q=Civilization+and+Its+Discontents+Sigmund+Freud" target="_blank">Civilization and Its Discontents</a> — Sigmund Freud</li>
+                <li><a href="https://www.goodreads.com/search?q=The+Interpretation+of+Dreams+Sigmund+Freud" target="_blank">The Interpretation of Dreams</a> — Sigmund Freud</li>
+                <li><a href="https://www.goodreads.com/search?q=The+Assault+on+Truth+Jeffrey+Masson" target="_blank">The Assault on Truth</a> — Jeffrey Masson</li>
+            </ul>
+        </div>
+    </section>
 
     <!-- ABOUT SECTION -->
     <section>
@@ -90,7 +166,7 @@
         </div>
     </section>
 
-    <!-- ACADEMIC SERVICE SECTION (NEW) -->
+    <!-- ACADEMIC SERVICE SECTION -->
     <section>
         <h2>Academic Service</h2>
         <p>
@@ -98,11 +174,11 @@
         </p>
     </section>
 
-    <!-- EXPERIENCE SECTION (UPDATED TO NARRATIVE STYLE) -->
+    <!-- EXPERIENCE SECTION -->
     <section>
         <h2>Experience</h2>
 
-         <div class="job">
+       <div class="job">
             <h3>Research Assistant | Faculty of Economic Sciences (FES), HSE University</h3>
             <div class="meta">Sep 2025 – Present | Moscow, Russia</div>
             <p>
