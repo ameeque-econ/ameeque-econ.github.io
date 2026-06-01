@@ -278,15 +278,37 @@
             var closeLink = document.getElementById('close-foundations');
             var section = document.getElementById('foundations');
 
+            // Function to handle the state of the hash in URL
+            function handleUrlHash() {
+                if (window.location.hash === '#foundations') {
+                    section.style.display = 'block';
+                    // Allow small delay for browser to render display:block before scrolling
+                    setTimeout(function() {
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }, 100);
+                } else {
+                    section.style.display = 'none';
+                }
+            }
+
+            // Check URL hash immediately on initial page load
+            handleUrlHash();
+
+            // Handle the back/forward browser history changes
+            window.addEventListener('hashchange', handleUrlHash);
+
             // Toggle visibility when clicking navigation link
             navLink.addEventListener('click', function(e) {
                 e.preventDefault();
                 if (section.style.display === 'block') {
                     section.style.display = 'none';
+                    // Cleanly remove hash from browser address bar without reload
+                    history.pushState("", document.title, window.location.pathname + window.location.search);
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 } else {
                     section.style.display = 'block';
-                    // Allow small delay for browser to register display:block before scrolling
+                    // Cleanly append hash to browser address bar without reload
+                    history.pushState(null, null, '#foundations');
                     setTimeout(function() {
                         section.scrollIntoView({ behavior: 'smooth' });
                     }, 50);
@@ -297,6 +319,8 @@
             closeLink.addEventListener('click', function(e) {
                 e.preventDefault();
                 section.style.display = 'none';
+                // Cleanly remove hash from browser address bar without reload
+                history.pushState("", document.title, window.location.pathname + window.location.search);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         });
