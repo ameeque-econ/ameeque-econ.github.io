@@ -140,186 +140,197 @@
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section>
-        <h2>About Me</h2>
-        <p>
-            I am an M.Sc. graduate in Economics from <strong>HSE University (Moscow)</strong> and a Fulbright Alumnus. 
-            My research interests lie at the intersection of <strong>Development Economics</strong> and the <strong>Economics of Education</strong>, with a particular focus on using applied econometrics to evaluate public policy interventions. My analytical work is complemented by a deep personal interest in classical philosophy and literature, which shape my perspective on human behavior and social frameworks.
-        </p>
-        <p>
-            Previously, I worked as a Research Assistant at the <strong>Centre for Economic Research in Pakistan (CERP)</strong> and as a Research Intern at <strong>IFAT (Budapest)</strong>.
-            My methodological toolkit includes causal inference, the design and implementation of RCTs, and the analysis of large-scale household datasets using Stata and R.
-        </p>
-    </section>
+    <!-- WRAPPER FOR MAIN CV SECTIONS (Allows dynamic toggling) -->
+    <div id="cv-content">
 
-    <!-- RESEARCH SECTION -->
-    <section>
-        <h2>Research Papers</h2>
+        <!-- ABOUT SECTION -->
+        <section>
+            <h2>About Me</h2>
+            <p>
+                I am an M.Sc. graduate in Economics from <strong>HSE University (Moscow)</strong> and a Fulbright Alumnus. 
+                My research interests lie at the intersection of <strong>Development Economics</strong> and the <strong>Economics of Education</strong>, with a particular focus on using applied econometrics to evaluate public policy interventions. My analytical work is complemented by a deep personal interest in classical philosophy and literature, which shape my perspective on human behavior and social frameworks.
+            </p>
+            <p>
+                Previously, I worked as a Research Assistant at the <strong>Centre for Economic Research in Pakistan (CERP)</strong> and as a Research Intern at <strong>IFAT (Budapest)</strong>.
+                My methodological toolkit includes causal inference, the design and implementation of RCTs, and the analysis of large-scale household datasets using Stata and R.
+            </p>
+        </section>
+
+        <!-- RESEARCH SECTION -->
+        <section>
+            <h2>Research Papers</h2>
+            
+            <div class="paper">
+                <h3><a href="https://doi.org/10.1016/j.ijedro.2025.100571">Creative Thinking, Mathematics Achievement, and Well-being</a></h3>
+                <div class="journal">International Journal of Educational Research Open, 2025</div>
+                <p>
+                    Utilized multilevel modeling on PISA 2022 dataset to demonstrate that self-efficacy is the primary driver of student well-being, surpassing cognitive creative skills.
+                </p>
+            </div>
+
+            <div class="paper">
+                <h3><a href="https://dx.doi.org/10.2139/ssrn.5369543">Assessing the Impact of US Public Procurement on Economic Development</a></h3>
+                <div class="journal">Working Paper (Available on SSRN)</div>
+                <p>
+                    Analyzed public procurement efficiency by integrating three large-scale U.S. government datasets (FPDS, FEVS, FedScope) using an Instrumental Variable (IV) strategy.
+                </p>
+            </div>
+        </section>
+
+        <!-- WORKS IN PROGRESS -->
+        <section>
+            <h2>Works in Progress</h2>
+
+            <div class="paper">
+                <h3>The Generational Shift: Dynamic Effects of Educational Infrastructure on Women’s Empowerment and Marriage Markets in Mexico and Brazil</h3>
+                <div class="journal">Project in Progress</div>
+                <p>
+                    Evaluates the causal impact of staggered sub-national secondary school expansions on women's life-cycle outcomes in Mexico and Brazil. Utilizing IPUMS census microdata (1990–2020) matched with administrative school foundation records, this comparative study exploits geographic and temporal variation in access to secondary education. Methodologically, the study implements the Borusyak, Jaravel, and Spiess (2024) imputation estimator to address biases in traditional staggered Difference-in-Differences (TWFE) designs, testing labor market outcomes alongside marriage market signaling channels (assortative mating and spousal age gaps).
+                </p>
+            </div>
+            
+            <div class="paper">
+                <h3>Does Asymmetric Cross-Border Cultural Exposure Weaken National Identity Salience and Generalized Social Trust?</h3>
+                <div class="journal">Project in Progress</div>
+                <p>
+                    Investigates the impact of asymmetric cross-border cultural flows on state-centric national pride and generalized trust in post-partition Pakistan. This project implements a mixed-method design combining Hierarchical Linear Modeling (HLM) on World Values Survey microdata with province-level digital exposure indices derived from Google Trends and GDELT Project APIs, supplemented by qualitative historical process-tracing of state educational boundary maintenance and heritage-language buffering mechanisms.
+                </p>
+            </div>
+        </section>
+
+        <!-- ACADEMIC SERVICE SECTION -->
+        <section>
+            <h2>Academic Service</h2>
+            <p>
+                <strong>Referee:</strong> <em>International Journal of Educational Research Open</em> (Elsevier)
+            </p>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section>
+            <h2>Experience</h2>
+
+            <div class="job">
+                <h3>Research Assistant | Faculty of Economic Sciences (FES), HSE University</h3>
+                <div class="meta">Sep 2025 – Present | Moscow, Russia</div>
+                <p>
+                    Project FES: Topics on Long-Run Economic Growth and Development (Under the supervision of Prof. Dmitry A. Veselov) | Compile, clean, and analyze extensive cross-country panel datasets using [Stata/R] to test theoretical models related to institutional quality, wealth distribution, and economic divergence.
+                </p>
+            </div>
+
+            <div class="job">
+                <h3>Market Research Analyst (Part-time) | Silverlight Research Group</h3>
+                <div class="meta">Remote</div>
+                <p>
+                    Conduct market mapping and industry analysis to identify key economic agents and experts for institutional clients. Translate complex research requirements into targeted data acquisition strategies.
+                </p>
+            </div>
+
+            <div class="job">
+                <h3>Intl. Support Specialist | Yandex</h3>
+                <div class="meta">Aug 2024 – Mar 2025 | Moscow, Russia</div>
+                <p>
+                    Synthesized qualitative user feedback to identify friction points, directly informing product strategy. Analyzed consumer data trends to guide service enhancements.
+                </p>
+            </div>
+            
+            <div class="job">
+                <h3>Research Intern | Institute for Foreign Affairs and Trade (IFAT)</h3>
+                <div class="meta">Feb 2024 – Jun 2024 | Budapest, Hungary</div>
+                <p>
+                    Provided research support to senior fellows by conducting literature reviews and synthesizing policy data. Developed an independent research project analyzing key foreign policy issues under senior mentorship.
+                </p>
+            </div>
+
+            <div class="job">
+                <h3>Research Assistant | Centre for Economic Research in Pakistan (CERP)</h3>
+                <div class="meta">Dec 2022 – Jun 2023 | Lahore, Pakistan</div>
+                <p>
+                    Analyzed a longitudinal dataset of 31,495 households using Stata and R to identify barriers to women's economic empowerment. Assisted with RCT implementation, randomization protocols, and data cleaning. Contributed to policy briefs for stakeholders (PSDF) by synthesizing historical findings with new data.
+                </p>
+            </div>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section>
+            <h2>Education</h2>
+            <div class="job">
+                <h3>M.Sc. in Economics (Applied Economics)</h3>
+                <div class="meta">HSE University | Moscow, Russia | 2023 – 2025</div>
+                <p><em>Awards:</em> Russian State Scholarship (Full Tuition), Vladimir Potanin Foundation Scholarship.</p>
+            </div>
+
+            <div class="job">
+                <h3>Study of the U.S. Institutes (SUSI)</h3>
+                <div class="meta">University of Massachusetts Amherst | USA | 2021 – 2022</div>
+                <p>Selected for U.S. Dept. of State program; completed policy seminars, capstone project, and visits to Harvard, MIT, and UN.</p>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section>
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:amiek@edu.hse.ru">amiek@edu.hse.ru</a></p>
+            <p>Location: Moscow, Russia</p>
+        </section>
         
-        <div class="paper">
-            <h3><a href="https://doi.org/10.1016/j.ijedro.2025.100571">Creative Thinking, Mathematics Achievement, and Well-being</a></h3>
-            <div class="journal">International Journal of Educational Research Open, 2025</div>
-            <p>
-                Utilized multilevel modeling on PISA 2022 dataset to demonstrate that self-efficacy is the primary driver of student well-being, surpassing cognitive creative skills.
-            </p>
-        </div>
+    </div>
 
-        <div class="paper">
-            <h3><a href="https://dx.doi.org/10.2139/ssrn.5369543">Assessing the Impact of US Public Procurement on Economic Development</a></h3>
-            <div class="journal">Working Paper (Available on SSRN)</div>
-            <p>
-                Analyzed public procurement efficiency by integrating three large-scale U.S. government datasets (FPDS, FEVS, FedScope) using an Instrumental Variable (IV) strategy.
-            </p>
-        </div>
-    </section>
-
-    <!-- WORKS IN PROGRESS -->
-    <section>
-        <h2>Works in Progress</h2>
-
-        <div class="paper">
-            <h3>The Generational Shift: Dynamic Effects of Educational Infrastructure on Women’s Empowerment and Marriage Markets in Mexico and Brazil</h3>
-            <div class="journal">Project in Progress</div>
-            <p>
-                Evaluates the causal impact of staggered sub-national secondary school expansions on women's life-cycle outcomes in Mexico and Brazil. Utilizing IPUMS census microdata (1990–2020) matched with administrative school foundation records, this comparative study exploits geographic and temporal variation in access to secondary education. Methodologically, the study implements the Borusyak, Jaravel, and Spiess (2024) imputation estimator to address biases in traditional staggered Difference-in-Differences (TWFE) designs, testing labor market outcomes alongside marriage market signaling channels (assortative mating and spousal age gaps).
-            </p>
-        </div>
-        
-        <div class="paper">
-            <h3>Does Asymmetric Cross-Border Cultural Exposure Weaken National Identity Salience and Generalized Social Trust?</h3>
-            <div class="journal">Project in Progress</div>
-            <p>
-                Investigates the impact of asymmetric cross-border cultural flows on state-centric national pride and generalized trust in post-partition Pakistan. This project implements a mixed-method design combining Hierarchical Linear Modeling (HLM) on World Values Survey microdata with province-level digital exposure indices derived from Google Trends and GDELT Project APIs, supplemented by qualitative historical process-tracing of state educational boundary maintenance and heritage-language buffering mechanisms.
-            </p>
-        </div>
-    </section>
-
-    <!-- ACADEMIC SERVICE SECTION -->
-    <section>
-        <h2>Academic Service</h2>
-        <p>
-            <strong>Referee:</strong> <em>International Journal of Educational Research Open</em> (Elsevier)
-        </p>
-    </section>
-
-    <!-- EXPERIENCE SECTION -->
-    <section>
-        <h2>Experience</h2>
-
-     <div class="job">
-            <h3>Research Assistant | Faculty of Economic Sciences (FES), HSE University</h3>
-            <div class="meta">Sep 2025 – Present | Moscow, Russia</div>
-            <p>
-                Project FES: Topics on Long-Run Economic Growth and Development (Under the supervision of Prof. Dmitry A. Veselov) | Compile, clean, and analyze extensive cross-country panel datasets using [Stata/R] to test theoretical models related to institutional quality, wealth distribution, and economic divergence.
-            </p>
-        </div>
-
-        <div class="job">
-            <h3>Market Research Analyst (Part-time) | Silverlight Research Group</h3>
-            <div class="meta">Remote</div>
-            <p>
-                Conduct market mapping and industry analysis to identify key economic agents and experts for institutional clients. Translate complex research requirements into targeted data acquisition strategies.
-            </p>
-        </div>
-
-           <div class="job">
-            <h3>Intl. Support Specialist | Yandex</h3>
-            <div class="meta">Aug 2024 – Mar 2025 | Moscow, Russia</div>
-            <p>
-                Synthesized qualitative user feedback to identify friction points, directly informing product strategy. Analyzed consumer data trends to guide service enhancements.
-            </p>
-        </div>
-        
-        <div class="job">
-            <h3>Research Intern | Institute for Foreign Affairs and Trade (IFAT)</h3>
-            <div class="meta">Feb 2024 – Jun 2024 | Budapest, Hungary</div>
-            <p>
-                Provided research support to senior fellows by conducting literature reviews and synthesizing policy data. Developed an independent research project analyzing key foreign policy issues under senior mentorship.
-            </p>
-        </div>
-
-        <div class="job">
-            <h3>Research Assistant | Centre for Economic Research in Pakistan (CERP)</h3>
-            <div class="meta">Dec 2022 – Jun 2023 | Lahore, Pakistan</div>
-            <p>
-                Analyzed a longitudinal dataset of 31,495 households using Stata and R to identify barriers to women's economic empowerment. Assisted with RCT implementation, randomization protocols, and data cleaning. Contributed to policy briefs for stakeholders (PSDF) by synthesizing historical findings with new data.
-            </p>
-        </div>
-    </section>
-
-    <!-- EDUCATION SECTION -->
-    <section>
-        <h2>Education</h2>
-        <div class="job">
-            <h3>M.Sc. in Economics (Applied Economics)</h3>
-            <div class="meta">HSE University | Moscow, Russia | 2023 – 2025</div>
-            <p><em>Awards:</em> Russian State Scholarship (Full Tuition), Vladimir Potanin Foundation Scholarship.</p>
-        </div>
-
-        <div class="job">
-            <h3>Study of the U.S. Institutes (SUSI)</h3>
-            <div class="meta">University of Massachusetts Amherst | USA | 2021 – 2022</div>
-            <p>Selected for U.S. Dept. of State program; completed policy seminars, capstone project, and visits to Harvard, MIT, and UN.</p>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:amiek@edu.hse.ru">amiek@edu.hse.ru</a></p>
-        <p>Location: Moscow, Russia</p>
-    </section>
-
-    <!-- JAVASCRIPT FOR TOGGLE VISIBILITY -->
+    <!-- JAVASCRIPT FOR DYNAMIC DEDICATED VIEW TOGGLE -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var navLink = document.getElementById('nav-foundations');
             var closeLink = document.getElementById('close-foundations');
             var section = document.getElementById('foundations');
+            var cvContent = document.getElementById('cv-content');
 
-            // Function to handle the state of the hash in URL
+            // Function to handle layout depending on URL hash
             function handleUrlHash() {
                 if (window.location.hash === '#foundations') {
                     section.style.display = 'block';
-                    // Allow small delay for browser to render display:block before scrolling
-                    setTimeout(function() {
-                        section.scrollIntoView({ behavior: 'smooth' });
-                    }, 100);
+                    cvContent.style.display = 'none'; // Completely hide standard CV
+                    navLink.textContent = 'View CV';
+                    window.scrollTo({ top: 0 }); // Snap to top of books page
                 } else {
                     section.style.display = 'none';
+                    cvContent.style.display = 'block'; // Show full standard CV
+                    navLink.textContent = 'Intellectual Foundations';
                 }
             }
 
-            // Check URL hash immediately on initial page load
+            // Check URL hash immediately on page load
             handleUrlHash();
 
-            // Handle the back/forward browser history changes
+            // Handle browser back/forward buttons
             window.addEventListener('hashchange', handleUrlHash);
 
-            // Toggle visibility when clicking navigation link
+            // Toggle layout when clicking the navigation link
             navLink.addEventListener('click', function(e) {
                 e.preventDefault();
                 if (section.style.display === 'block') {
                     section.style.display = 'none';
-                    // Cleanly remove hash from browser address bar without reload
+                    cvContent.style.display = 'block';
+                    navLink.textContent = 'Intellectual Foundations';
+                    // Cleanly remove hash from address bar without reloading
                     history.pushState("", document.title, window.location.pathname + window.location.search);
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 } else {
                     section.style.display = 'block';
-                    // Cleanly append hash to browser address bar without reload
+                    cvContent.style.display = 'none';
+                    navLink.textContent = 'View CV';
+                    // Append hash to address bar without reloading
                     history.pushState(null, null, '#foundations');
-                    setTimeout(function() {
-                        section.scrollIntoView({ behavior: 'smooth' });
-                    }, 50);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 }
             });
 
-            // Collapse section when clicking [Hide]
+            // Return to standard CV when clicking [Hide]
             closeLink.addEventListener('click', function(e) {
                 e.preventDefault();
                 section.style.display = 'none';
-                // Cleanly remove hash from browser address bar without reload
+                cvContent.style.display = 'block';
+                navLink.textContent = 'Intellectual Foundations';
+                // Cleanly remove hash from address bar without reloading
                 history.pushState("", document.title, window.location.pathname + window.location.search);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
