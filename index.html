@@ -57,7 +57,7 @@
 </head>
 <body>
 
-    <!-- HEADER -->
+    <!-- HEADER (ALWAYS VISIBLE) -->
     <div class="header">
         <h1>Ameeque -</h1>
         <div class="sub-header">M.Sc. in Economics, HSE University</div>
@@ -69,14 +69,9 @@
         </div>
     </div>
 
-    <!-- INTELLECTUAL FOUNDATIONS SECTION (HIDDEN BY DEFAULT) -->
+    <!-- INTELLECTUAL FOUNDATIONS SECTION (ONLY SHOWN ON #FOUNDATIONS HASH LINK) -->
     <section id="foundations">
-        <h2>
-            Intellectual Foundations 
-            <span style="float: right; font-size: 0.95rem; font-weight: normal;">
-                <a href="#" id="close-foundations" style="color: #666;">[Hide]</a>
-            </span>
-        </h2>
+        <h2>Intellectual Foundations</h2>
         <p>A curated selection of literature and philosophy that shape my worldview, ranging from classical antiquity to modern explorations of the human condition.</p>
         
         <div class="book-category">
@@ -140,7 +135,7 @@
         </div>
     </section>
 
-    <!-- WRAPPER FOR MAIN CV SECTIONS (Allows dynamic toggling) -->
+    <!-- WRAPPER FOR MAIN CV SECTIONS -->
     <div id="cv-content">
 
         <!-- ABOUT SECTION -->
@@ -276,64 +271,32 @@
         
     </div>
 
-    <!-- JAVASCRIPT FOR DYNAMIC DEDICATED VIEW TOGGLE -->
+    <!-- JAVASCRIPT FOR DYNAMIC DEDICATED VIEW -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var navLink = document.getElementById('nav-foundations');
-            var closeLink = document.getElementById('close-foundations');
             var section = document.getElementById('foundations');
             var cvContent = document.getElementById('cv-content');
 
-            // Function to handle layout depending on URL hash
+            // Function to configure page layout based on URL hash state
             function handleUrlHash() {
                 if (window.location.hash === '#foundations') {
                     section.style.display = 'block';
-                    cvContent.style.display = 'none'; // Completely hide standard CV
-                    navLink.textContent = 'View CV';
-                    window.scrollTo({ top: 0 }); // Snap to top of books page
+                    cvContent.style.display = 'none'; // Hide all other CV sections
+                    navLink.style.display = 'none';    // Hide the nav link entirely (No "View CV" or "Foundations" option)
+                    window.scrollTo({ top: 0 });      // Snap straight to the top of the page
                 } else {
                     section.style.display = 'none';
-                    cvContent.style.display = 'block'; // Show full standard CV
-                    navLink.textContent = 'Intellectual Foundations';
+                    cvContent.style.display = 'block'; // Show all standard CV sections
+                    navLink.style.display = 'inline';   // Make "Intellectual Foundations" nav link visible
                 }
             }
 
-            // Check URL hash immediately on page load
+            // Check URL hash immediately on initial page load
             handleUrlHash();
 
-            // Handle browser back/forward buttons
+            // Handle browser back/forward history navigation smoothly
             window.addEventListener('hashchange', handleUrlHash);
-
-            // Toggle layout when clicking the navigation link
-            navLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                if (section.style.display === 'block') {
-                    section.style.display = 'none';
-                    cvContent.style.display = 'block';
-                    navLink.textContent = 'Intellectual Foundations';
-                    // Cleanly remove hash from address bar without reloading
-                    history.pushState("", document.title, window.location.pathname + window.location.search);
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                } else {
-                    section.style.display = 'block';
-                    cvContent.style.display = 'none';
-                    navLink.textContent = 'View CV';
-                    // Append hash to address bar without reloading
-                    history.pushState(null, null, '#foundations');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
-            });
-
-            // Return to standard CV when clicking [Hide]
-            closeLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                section.style.display = 'none';
-                cvContent.style.display = 'block';
-                navLink.textContent = 'Intellectual Foundations';
-                // Cleanly remove hash from address bar without reloading
-                history.pushState("", document.title, window.location.pathname + window.location.search);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
         });
     </script>
 
